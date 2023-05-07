@@ -2,8 +2,10 @@
 
 const { getActivitiesEndpoint, postActivitiesEndpoint, getActivitiesByIdEndpoint, putActivitiesByIdEndpoing, deleteActivitiesByIdEndpoint } = require('../service-object/Activities.spec.js');
 const { getAuthorsEndpoint, postAuthorsEndpoint, putAuthorsByIdEndpoint, getAuthorsByIdEndpoint, deleteAuthorsByIdEndpoint } = require('../service-object/Authors.spec.js');
+const { postBooksEndpoint, getBooksByIdEndpoint, getBooksEndpoint, putBooksByIdEndpoint, deleteBooksByIdEndpoint } = require('../service-object/Books.spec.js');
 const ActivitiesData = require ('../data/ActivitiesData.js');
 const AuthorsData = require ('../data/AuthorsData.js');
+const BooksData = require ('../data/BooksData.js');
 
 describe('Activities test suite', () => {
   it('should test the Activities API endpoints', async () => {
@@ -22,5 +24,16 @@ describe('Authors test suite', () => {
      await putAuthorsByIdEndpoint(AuthorsData.putDataAuthors, AuthorsData.putDataAuthorsCheck);
      await getAuthorsByIdEndpoint();
      await deleteAuthorsByIdEndpoint();
+  });  
+});
+
+
+describe('Books test suite', () => {
+  it('should test the Books API endpoints', async () => {
+     await postBooksEndpoint(BooksData.postDataBooks);
+     await getBooksEndpoint();
+     await putBooksByIdEndpoint(BooksData.putDataBooks, BooksData.putDataBooksCheck);
+     await getBooksByIdEndpoint();
+     await deleteBooksByIdEndpoint();
   });  
 });

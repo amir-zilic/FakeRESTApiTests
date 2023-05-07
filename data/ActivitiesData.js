@@ -1,4 +1,4 @@
-class Data { 
+class ActivitiesData { 
 
  postDataActivities = {
     id: 0,
@@ -20,4 +20,4 @@ putDataActivities = {
 
 }
 
-module.exports = new Data;
+module.exports = new ActivitiesData;

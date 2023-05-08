@@ -4,10 +4,12 @@ const { getActivitiesEndpoint, postActivitiesEndpoint, getActivitiesByIdEndpoint
 const { getAuthorsEndpoint, postAuthorsEndpoint, putAuthorsByIdEndpoint, getAuthorsByIdEndpoint, deleteAuthorsByIdEndpoint } = require('../service-object/Authors.spec.js');
 const { postBooksEndpoint, getBooksByIdEndpoint, getBooksEndpoint, putBooksByIdEndpoint, deleteBooksByIdEndpoint } = require('../service-object/Books.spec.js');
 const { postCoverPhotosEndpoint, getCoverPhotosEndpoint, putCoverPhotosByIdEndpoint, getCoverPhotosByIdEndpoint, deleteCoverPhotosByIdEndpoint } = require('../service-object/CoverPhotos.spec.js');
+const { postUsersEndpoint, getUsersEndpoint, putUsersByIdEndpoint, getUsersByIdEndpoint, deleteUsersByIdEndpoint } = require('../service-object/Users.spec.js');
 const ActivitiesData = require ('../data/ActivitiesData.js');
 const AuthorsData = require ('../data/AuthorsData.js');
 const BooksData = require ('../data/BooksData.js');
 const CoverPhotosData = require('../data/CoverPhotosData.js');
+const UsersData = require('../data/UsersData.js');
 
 describe('Activities test suite', () => {
   it('should test the Activities API endpoints', async () => {
@@ -47,5 +49,15 @@ describe('CoverPhotos test suite', () => {
      await putCoverPhotosByIdEndpoint(CoverPhotosData.putDataCoverPhotos, CoverPhotosData.putDataCoverPhotosCheck);
      await getCoverPhotosByIdEndpoint();
      await deleteCoverPhotosByIdEndpoint();
+  });  
+});
+
+describe('Users test suite', () => {
+  it('should test the Users API endpoints', async () => {
+     await postUsersEndpoint(UsersData.postDataUsers);
+     await getUsersEndpoint();
+     await putUsersByIdEndpoint(UsersData.putDataUsers, UsersData.putDataUsersCheck);
+     await getUsersByIdEndpoint();
+     await deleteUsersByIdEndpoint();
   });  
 });

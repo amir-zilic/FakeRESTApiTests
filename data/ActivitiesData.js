@@ -7,10 +7,6 @@ class ActivitiesData {
     completed: true
  };
 
-putDataActivities = {
-    title: "Changed Title"
-}
-
  putDataActivitiesCheck = {
     id: 0,
     title: "Changed Title",

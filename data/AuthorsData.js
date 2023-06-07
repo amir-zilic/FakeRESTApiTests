@@ -7,18 +7,11 @@ class AuthorsData {
         lastName: "string"
     };
    
-    putDataAuthors = {
-    id: 0,
-    idBook: 0,
-    firstName: "changed name",
-    lastName: "string"
-    }
-   
     putDataAuthorsCheck = {
        id: 0,
        idBook: 0,
        firstName: "changed name",
-       lastName: "string"
+       lastName: null
     }   
    }
    

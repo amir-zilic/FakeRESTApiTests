@@ -6,16 +6,10 @@ class Users {
         password: "string"
     };
    
-    putDataUsers = {
-        id: 0,
-        userName: "changed username",
-        password: "string"
-    }
-   
     putDataUsersCheck = {
         id: 0,
         userName: "changed username",
-        password: "string"
+        password: null
     }   
    }
    

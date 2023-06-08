@@ -1,6 +1,6 @@
 const { postCoverPhotosEndpoint, getCoverPhotosEndpoint, putCoverPhotosByIdEndpoint, getCoverPhotosByIdEndpoint, deleteCoverPhotosByIdEndpoint } = require('../service-object/CoverPhotos.spec.js');
-const CoverPhotosData = require('../data/CoverPhotosData.js');
-const { RequestData, RequestDataBuilder } = require('../data/RequestData.js');
+const CoverPhotosData = require('../data/CheckData/CoverPhotosData.js');
+const { RequestData, RequestDataBuilder } = require('../data/RequestData/RequestData.js');
 
 describe('CoverPhotos test suite', () => {
     it('should test the CoverPhotos API endpoints', async () => {

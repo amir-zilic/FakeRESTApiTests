@@ -1,6 +1,7 @@
 const { postBooksEndpoint, getBooksByIdEndpoint, getBooksEndpoint, putBooksByIdEndpoint, deleteBooksByIdEndpoint, parseBooks, validateBook } = require('../service-object/Books.spec.js');
-const BooksData = require ('../data/BooksData.js');
-const { RequestData, RequestDataBuilder } = require('../data/RequestData.js');
+const BooksData = require ('../data/CheckData/BooksData.js');
+const { RequestData, RequestDataBuilder } = require('../data/RequestData/RequestData.js');
+const currentTime = new Date();
 
 describe('Books test suite', () => {
     it('should test the Books API endpoints', async () => {
@@ -24,11 +25,14 @@ describe('Books test suite', () => {
     });  
   });
 
-  describe('Books test PARSING suite', () => {
-    it('PARSE THAT BOIIIII', async () => {
+  describe('Book validation', () => {
+    it('Parses each book individually', async () => {
+      console.log('');
+      console.log('[' + currentTime.toLocaleTimeString() + ']' + ' Invidual book ID and Title validation started' )
        booksList = await parseBooks();
        for(var i = 0; i < booksList.length; i++){
         await validateBook(booksList[i]);
        }
+       console.log('[' + currentTime.toLocaleTimeString() + ']' + ' Individual book ID and Title validation ended' )
     });  
   });

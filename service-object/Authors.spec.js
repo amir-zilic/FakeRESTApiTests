@@ -9,7 +9,7 @@ const currentTime = new Date();
 
 async function getAuthorsEndpoint() {
     const response = await instance.get('/api/v1/Authors');
-    expect(response.status).toBe(200);
+    expect(response.status).toBe(200)
   }
 
   async function postAuthorsEndpoint(postData, expectedData) {
@@ -20,14 +20,14 @@ async function getAuthorsEndpoint() {
         'Content-Type': 'application/json', 
       },
     });
-    expect(response.status).toEqual(200);
-    expect(response.data).toEqual(expectedData);
+    expect(response.status).toEqual(200)
+    expect(response.data).toEqual(expectedData)
   }
 
   async function getAuthorsByIdEndpoint() {
       const response = await instance.get('/api/v1/Authors/9');
-      expect(response.status).toBe(200);
-      expect(response.data.id).toBe(9);
+      expect(response.status).toBe(200)
+      expect(response.data.id).toBe(9)
   }
   
   async function putAuthorsByIdEndpoint(requestBody, responseBody) {
@@ -36,8 +36,8 @@ async function getAuthorsEndpoint() {
         'Content-Type': 'application/json', 
       },
     });
-    expect(response.status).toEqual(200);
-    expect(response.data).toEqual(responseBody);
+    expect(response.status).toEqual(200)
+    expect(response.data).toEqual(responseBody)
   }
 
   async function deleteAuthorsByIdEndpoint() {

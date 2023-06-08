@@ -1,10 +1,10 @@
 class AuthorsData { 
 
     postDataAuthors = {
-        id: 0,
-        idBook: 0,
-        firstName: "string",
-        lastName: "string"
+       id: 0,
+       idBook: 0,
+       firstName: "string",
+       lastName: "string"
     };
    
     putDataAuthorsCheck = {

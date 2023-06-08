@@ -9,7 +9,7 @@ const currentTime = new Date();
 
 async function getActivitiesEndpoint() {
     const response = await instance.get('/api/v1/Activities');
-    expect(response.status).toBe(200, "Bad status code");
+    expect(response.status).toBe(200);
     expect(response.data.length).toBe(30);
   }
 
@@ -37,13 +37,13 @@ async function getActivitiesEndpoint() {
         'Content-Type': 'application/json', 
       },
     });
-    expect(response.status).toEqual(200);
+    expect(response.status).toEqual(200)
     expect(response.data).toEqual(responseBody);
   }
 
   async function deleteActivitiesByIdEndpoint() {
     const response = await instance.delete('/api/v1/Activities/9');
-    expect(response.status).toEqual(200);
+    expect(response.status).toEqual(200)
     console.log('[' + currentTime.toLocaleTimeString() + ']' + ' Activities API Test ended' )
   }
   

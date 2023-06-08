@@ -1,6 +1,6 @@
 const { getAuthorsEndpoint, postAuthorsEndpoint, putAuthorsByIdEndpoint, getAuthorsByIdEndpoint, deleteAuthorsByIdEndpoint } = require('../service-object/Authors.spec.js');
-const AuthorsData = require ('../data/AuthorsData.js');
-const { RequestData, RequestDataBuilder } = require('../data/RequestData.js');
+const AuthorsData = require ('../data/CheckData/AuthorsData.js');
+const { RequestData, RequestDataBuilder } = require('../data/RequestData/RequestData.js');
 
 describe('Authors test suite', () => {
     it('should test the Authors API endpoints', async () => {

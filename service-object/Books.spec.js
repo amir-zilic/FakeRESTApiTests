@@ -1,5 +1,5 @@
 const axios = require('axios');
-const { RequestData, RequestDataBuilder } = require('../data/RequestData.js');
+const { RequestData, RequestDataBuilder } = require('../data/RequestData/RequestData.js');
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 100000;
 
 const instance = axios.create({
@@ -47,7 +47,7 @@ async function getBooksEndpoint() {
     console.log('[' + currentTime.toLocaleTimeString() + ']' + ' Books API Test ended' )
   }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Individual books validaton
 
 async function parseBooks() {
   const response = await instance.get('/api/v1/Books');

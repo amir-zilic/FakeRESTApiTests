@@ -1,6 +1,6 @@
 const { getActivitiesEndpoint, postActivitiesEndpoint, getActivitiesByIdEndpoint, putActivitiesByIdEndpoing, deleteActivitiesByIdEndpoint } = require('../service-object/Activities.spec.js');
-const ActivitiesData = require ('../data/ActivitiesData.js');
-const { RequestData, RequestDataBuilder } = require('../data/RequestData.js');
+const ActivitiesData = require ('../data/CheckData/ActivitiesData.js');
+const { RequestData, RequestDataBuilder } = require ('../data/RequestData/RequestData.js')
 
 describe('Activities test suite', () => {
     it('should test the Activities API endpoints', async () => {

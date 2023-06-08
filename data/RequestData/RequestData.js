@@ -34,6 +34,10 @@ class RequestData {
       this.idBook = 0;
       this.pageCount = 0;
     }
+
+    build() {
+      return new RequestData(this);
+    }
   
     withTitle(title) {
       this.title = title;
@@ -103,10 +107,6 @@ class RequestData {
     withPageCount(pageCount) {
       this.pageCount = pageCount;
       return this;
-    }
-  
-    build() {
-      return new RequestData(this);
     }
   }
   

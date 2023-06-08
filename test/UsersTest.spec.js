@@ -1,6 +1,6 @@
 const { postUsersEndpoint, getUsersEndpoint, putUsersByIdEndpoint, getUsersByIdEndpoint, deleteUsersByIdEndpoint } = require('../service-object/Users.spec.js');
-const UsersData = require('../data/UsersData.js');
-const { RequestData, RequestDataBuilder } = require('../data/RequestData.js');
+const UsersData = require('../data/CheckData/UsersData.js');
+const { RequestData, RequestDataBuilder } = require('../data/RequestData/RequestData.js');
 
 describe('Users test suite', () => {
     it('should test the Users API endpoints', async () => {
